@@ -1,0 +1,20 @@
+<h1>CustomSearch</h1>
+
+<%= form_for Search.new do |f| %>
+
+    <div class="field">
+        <%= f.label :min_time %><br>
+        <%= f.number_field :min_time %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :max_time %><br>
+        <%= f.number_field :max_time %>
+    </div>
+    
+    
+    <div class="actions"><%= f.submit "Search", class: "pure-button pure-button-primary" %></div>
+
+<% end %>
+
+<p><%= link_to 'Back', doctors_path %></p>

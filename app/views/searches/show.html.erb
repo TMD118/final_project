@@ -1,0 +1,23 @@
+<h1>SearchResults</h1>
+
+<p><%= link_to 'Back', doctors_path %></p>
+
+<% if @search.search_doctors.empty? %>
+
+    <p>NoRecordsFound</p>
+
+<% else %>
+
+    <% @search.search_doctors.each do |c| %>
+        <br>
+        <div class="div">
+            
+            <h1><%= c.name  %></h1>
+            <p>From: <%= c.arrivaltime %></p>
+            <p>To: <%= c.leavetime %></p>
+                
+        </div>
+        
+    <% end %>
+
+<% end %>
