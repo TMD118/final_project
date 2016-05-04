@@ -1,3 +1,5 @@
+<div class = "complete">
+
 <%= form_for(@doctor) do |f| %>
   <% if @doctor.errors.any? %>
     <div id="error_explanation">
@@ -10,36 +12,39 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :room %><br>
-    <%= f.text_field :room %>
-  </div>
-  <div class="field">
-    <%= f.label :officeno %><br>
-    <%= f.text_field :officeno %>
-  </div>
-  <div class="field">
-    <%= f.label :cellno %><br>
-    <%= f.text_field :cellno %>
-  </div>
-  <div class="field">
-    <%= f.label :arrivaltime %><br>
-    <%= f.number_field :arrivaltime %>
-  </div>
-  <div class="field">
-    <%= f.label :leavetime %><br>
-    <%= f.number_field :leavetime %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, :placeholder => "Your Full Name", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email, :placeholder => "Valid Email Address", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :room %>
+      <%= f.text_field :room, :placeholder => "Enter your room Number", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :officeno %>
+      <%= f.text_field :officeno, :placeholder => "Office Phone Number", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :cellno %>
+      <%= f.text_field :cellno, :placeholder => "Mobile Phone Number", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :arrivaltime %>
+      <%= f.number_field :arrivaltime, :placeholder => "Time in HHMM", :class => "field"%><br>
+    </div>
+    <div class="field">
+      <%= f.label :leavetime %>
+      <%= f.number_field :leavetime, :placeholder => "Time in HHMM", :class => "field"%><br>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  
 <% end %>
+</div>
+

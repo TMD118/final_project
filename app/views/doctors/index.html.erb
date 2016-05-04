@@ -1,17 +1,18 @@
+<div class = "complete">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Doctors</h1>
+<h1>Doctors List</h1>
 
 
   <%= form_tag doctors_path , :method => 'get' do %>
-    <%= text_field_tag :search , params[:search] %>
-    <%= submit_tag "Search" %>
+    <%= text_field_tag :search , params[:search], :placeholder => "Search..", :name => 'search' %>
+    <%= submit_tag "Search", :class => 'actions' %>
     
-  <%end%>
+  <%end%><br>
 
-<%= link_to "ADVANCED SEARCH",new_search_path %>
+<%= link_to "ADVANCED SEARCH",new_search_path %><br>
 
-<table border=5>
+<br><table>
   <thead>
     <tr>
       <th>Name</th>
@@ -46,3 +47,24 @@
 <br>
 
 <%= link_to 'New Doctor', new_doctor_path %>
+
+</div>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #9DC45F;
+    color: white;
+}
+</style>
