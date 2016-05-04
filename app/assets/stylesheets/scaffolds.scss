@@ -119,7 +119,7 @@ div {
     color: #555;
     height: 30px;
     line-height:15px;
-    width: 100%;
+    width: 30%;
     padding: 0px 0px 0px 10px;
     margin-top: 2px;
     border: 1px solid #E5E5E5;
@@ -128,6 +128,11 @@ div {
     -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
     box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
     font: normal 14px/14px Arial, Helvetica, sans-serif;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.complete input[class = "field"]:focus {
+  width: 70%;
 }
 
 .complete input[type=submit] {
@@ -158,7 +163,7 @@ div {
 }
 
 .complete input[name='search'] {
-    width: 30%;
+    width: 15%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -168,6 +173,12 @@ div {
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 7px 7px 7px 7px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.complete input[type=text]:focus {
+    width: 50%;
 }
 
 
