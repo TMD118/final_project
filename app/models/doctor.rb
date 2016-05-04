@@ -1,5 +1,5 @@
 class Doctor < ActiveRecord::Base
-    
+    has_many :patients
     E_regex=/\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
     validates   :name,      :presence   =>  true
     validates   :arrivaltime,      :presence   =>  true
@@ -10,7 +10,7 @@ class Doctor < ActiveRecord::Base
     validate :timing_range
     validates :officeno,    :presence => true,
                             :numericality => true,
-                            :length => { :minimum => 10, :maximum => 15 }
+                            :length => { :minimum => 2, :maximum => 15 }
     
     def self.search(search)
         if search

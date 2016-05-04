@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong >Name:</strong>
   <%= @doctor.name %>
 </p>
 
@@ -35,5 +35,6 @@
   <%= @doctor.leavetime %>
 </p>
 
+<%= link_to 'Show Patients', doctor_patients_path(@doctor) %>
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>
