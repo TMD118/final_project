@@ -28,7 +28,7 @@ class Doctor < ActiveRecord::Base
     end
     
     def timing_range
-        if (self.arrivaltime<0||self.leavetime>23)
+        if (self.arrivaltime<0||self.leavetime>24)
           errors.add(:arrivaltime,         ":use 24-hour time system")
           errors.add(:leavetime,           ":use 24-hour time system")
         end
